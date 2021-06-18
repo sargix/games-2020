@@ -1,0 +1,1529 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.return {
+  color: greenyellow;
+  font-size: 500%;
+  position: fixed;
+  bottom: 1vh;
+  right: 1vw;
+  z-index: 5;
+  transition: 0.5s linear;
+  transform: scale(0);
+  cursor: pointer;
+}
+
+.active {
+  transform: scale(1);
+}
+
+.active_p_left {
+  transform: translateX(105vw);
+}
+
+.active_p_right {
+  transform: translateX(-110vw);
+}
+
+header {
+  height: 100vh;
+  background-image: url("img/tlo_header.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.header_bg {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+header img {
+  max-width: 100%;
+}
+
+.header_logo {
+  position: absolute;
+  left: 10vw;
+  top: 40vh;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 120%;
+  padding: 10px 20px;
+  transform: translateX(0);
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  transform: translateX(6px);
+}
+
+header h1 {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  color: #ccc;
+  text-transform: uppercase;
+  font-size: 400%;
+}
+
+.header_icon {
+  font-size: 350%;
+  color: white;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid white;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header_icon i {
+  transform: translateY(-75px);
+  animation: arrow 2s linear infinite;
+}
+
+section {
+  height: 100vh;
+  overflow: hidden;
+}
+
+section p {
+  transition: 0.5s linear;
+}
+
+section.cyb {
+  background-image: url("img/cyber.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+section.cyb .section_bg {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10vh 5vw;
+  position: relative;
+}
+
+section.cyb h2 {
+  position: absolute;
+  top: 10vh;
+  left: 7vw;
+  font-size: 400%;
+  color: yellow;
+}
+
+section.cyb p {
+  position: absolute;
+  top: 35vh;
+  width: 70vw;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 150%;
+  font-size: 150%;
+  left: -100vw;
+}
+
+section.cyb .icon {
+  position: absolute;
+  bottom: 15vh;
+  right: 25vw;
+  font-size: 500%;
+  color: #678;
+  animation: chip 4s linear infinite;
+  text-shadow: 3px 2px 1px rgb(163, 163, 163);
+}
+
+section.the_last {
+  background-image: url("img/tlou.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section.the_last .section_bg {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(200, 200, 200, 0.2);
+  padding: 10vh 5vw;
+  position: relative;
+}
+
+section.the_last h2 {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 400%;
+  color: white;
+  text-shadow: 5px 4px 3px rgba(0, 0, 0, 1);
+}
+
+section.the_last p {
+  position: absolute;
+  top: 30vh;
+  width: 80vw;
+  color: #000;
+  letter-spacing: 1px;
+  line-height: 150%;
+  font-size: 150%;
+  right: -100vw;
+}
+
+section.the_last .icon {
+  position: absolute;
+  bottom: 15vh;
+  right: 50%;
+  transform: translateX(-50%);
+  font-size: 600%;
+  color: rgb(247, 167, 64);
+  animation: guitar 3s linear infinite;
+  text-shadow: 4px 3px 2px rgba(0, 0, 0, 1);
+}
+
+section.spider {
+  background-image: url("img/spider.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section.spider .section_bg {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10vh 5vw;
+  position: relative;
+}
+
+section.spider h2 {
+  position: absolute;
+  top: 13vh;
+  left: 11vw;
+  font-size: 400%;
+  color: rgb(148, 13, 13);
+  text-shadow: 4px 3px 2px rgba(0, 0, 0, 1);
+}
+
+section.spider p {
+  position: absolute;
+  top: 35vh;
+  width: 70vw;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 150%;
+  font-size: 150%;
+  left: -100vw;
+}
+
+section.spider .icon {
+  position: absolute;
+  text-shadow: 4px 3px 2px rgba(0, 0, 0, 1);
+  bottom: 15vh;
+  right: 25vw;
+  font-size: 700%;
+  color: rgb(253, 74, 74);
+  animation: spider 4s linear infinite;
+}
+
+section.formula {
+  background-image: url("img/f1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+section.formula .section_bg {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10vh 5vw;
+  position: relative;
+}
+
+section.formula h2 {
+  position: absolute;
+  top: 10vh;
+  right: 7vw;
+  font-size: 400%;
+  color: #bbb;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+section.formula p {
+  position: absolute;
+  top: 50vh;
+  width: 70vw;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 150%;
+  font-size: 150%;
+  left: -100vw;
+}
+
+section.formula .icon {
+  position: absolute;
+  bottom: 15vh;
+  right: 25vw;
+  font-size: 500%;
+  color: rgb(49, 218, 49);
+  animation: car 4s linear infinite;
+}
+
+section.ghost {
+  background-image: url("img/ghost.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section.ghost .section_bg {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10vh 5vw;
+  position: relative;
+}
+
+section.ghost h2 {
+  position: absolute;
+  bottom: 10vh;
+  right: 7vw;
+  font-size: 400%;
+  color: rgb(24, 62, 179);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+section.ghost p {
+  position: absolute;
+  top: 40vh;
+  width: 70vw;
+  color: black;
+  letter-spacing: 1px;
+  line-height: 150%;
+  font-size: 150%;
+  right: -100vw;
+}
+
+section.ghost .icon {
+  position: absolute;
+  top: 15vh;
+  left: 50vw;
+  font-size: 700%;
+  color: white;
+  animation: tree 6s linear infinite;
+}
+
+footer {
+  padding: 20px;
+  background-color: cornflowerblue;
+  font-size: 150%;
+  text-align: center;
+}
+
+@media (min-width: 320px) and (orientation: portrait) {
+  nav ul li a {
+    font-size: 45%;
+  }
+
+  nav ul li a:hover {
+    transform: translateX(0);
+  }
+
+  .header_logo {
+    left: 7vw;
+    top: 40vh;
+    width: 40%;
+  }
+
+  header h1 {
+    left: 10%;
+    top: 15%;
+    font-size: 200%;
+  }
+
+  header {
+    background-position: center right -40px;
+  }
+
+  section.cyb h2 {
+    top: 15vh;
+    left: 4vw;
+    font-size: 230%;
+  }
+
+  section.cyb p {
+    top: 28vh;
+    width: 70vw;
+    line-height: 150%;
+    font-size: 90%;
+  }
+
+  section.cyb .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 400%;
+  }
+
+  section.the_last h2 {
+    top: 15vh;
+    transform: translateX(0);
+    left: 10vw;
+    width: 100%;
+    font-size: 200%;
+  }
+
+  section.the_last p {
+    top: 28vh;
+    width: 70vw;
+    font-size: 90%;
+  }
+
+  section.the_last .icon {
+    bottom: 10vh;
+    right: 45vw;
+    transform: translateX(-50%);
+    font-size: 500%;
+  }
+
+  section.spider h2 {
+    top: 15vh;
+    left: 10vw;
+    width: 100%;
+    font-size: 200%;
+  }
+
+  section.spider {
+    background-position: center left -80vw;
+  }
+
+  section.spider p {
+    top: 32vh;
+    width: 70vw;
+    font-size: 90%;
+  }
+
+  section.spider .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 500%;
+  }
+
+  section.formula h2 {
+    top: 15vh;
+    left: 10vw;
+    width: 100%;
+    font-size: 200%;
+  }
+
+  section.formula {
+    background-position: center left -90vw;
+  }
+
+  section.formula p {
+    top: 32vh;
+    width: 70vw;
+    font-size: 90%;
+  }
+
+  section.formula .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 500%;
+  }
+
+  section.ghost h2 {
+    bottom: 11vh;
+    right: -3vw;
+    width: 100%;
+    font-size: 200%;
+  }
+
+  section.ghost {
+    background-position: center left -30vw;
+  }
+
+  section.ghost p {
+    top: 35vh;
+    width: 70vw;
+    font-size: 90%;
+  }
+
+  section.ghost .icon {
+    top: 15vh;
+    left: 45vw;
+    font-size: 500%;
+  }
+
+  .return {
+    font-size: 300%;
+  }
+
+  footer {
+    padding: 10px;
+    background-color: cornflowerblue;
+    font-size: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+  nav ul li a {
+    font-size: 55%;
+  }
+
+  nav ul li a:hover {
+    transform: translateX(0);
+  }
+
+  .header_logo {
+    left: 7vw;
+    top: 40vh;
+    width: 45%;
+  }
+
+  header h1 {
+    left: 10%;
+    top: 15%;
+    font-size: 230%;
+  }
+
+  header {
+    background-position: center right -40px;
+  }
+
+  section.cyb h2 {
+    top: 15vh;
+    left: 4vw;
+    font-size: 250%;
+  }
+
+  section.cyb p {
+    top: 28vh;
+    width: 70vw;
+    line-height: 150%;
+    font-size: 100%;
+  }
+
+  section.cyb .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 600%;
+  }
+
+  section.the_last h2 {
+    top: 15vh;
+    transform: translateX(0);
+    left: 5vw;
+    width: 100%;
+    font-size: 250%;
+  }
+
+  section.the_last p {
+    top: 28vh;
+    width: 70vw;
+    font-size: 100%;
+  }
+
+  section.the_last .icon {
+    bottom: 10vh;
+    right: 40vw;
+    transform: translateX(-50%);
+    font-size: 600%;
+  }
+
+  section.spider h2 {
+    top: 15vh;
+    left: 7vw;
+    width: 100%;
+    font-size: 230%;
+  }
+
+  section.spider {
+    background-position: center left -80vw;
+  }
+
+  section.spider p {
+    top: 32vh;
+    width: 70vw;
+    font-size: 100%;
+  }
+
+  section.spider .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 600%;
+  }
+
+  section.formula h2 {
+    top: 15vh;
+    left: 10vw;
+    width: 100%;
+    font-size: 250%;
+  }
+
+  section.formula {
+    background-position: center left -90vw;
+  }
+
+  section.formula p {
+    top: 32vh;
+    width: 70vw;
+    font-size: 100%;
+  }
+
+  section.formula .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 600%;
+  }
+
+  section.ghost h2 {
+    bottom: 14vh;
+    right: -3vw;
+    width: 100%;
+    font-size: 220%;
+  }
+
+  section.ghost {
+    background-position: center left -30vw;
+  }
+
+  section.ghost p {
+    top: 35vh;
+    width: 70vw;
+    font-size: 100%;
+  }
+
+  section.ghost .icon {
+    top: 15vh;
+    left: 45vw;
+    font-size: 600%;
+  }
+
+  .return {
+    font-size: 400%;
+  }
+
+  footer {
+    padding: 10px;
+    background-color: cornflowerblue;
+    font-size: 130%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 410px) and (orientation: portrait) {
+  nav ul li a {
+    font-size: 70%;
+  }
+
+  nav ul li a:hover {
+    transform: translateX(0);
+  }
+
+  .header_logo {
+    left: 4vw;
+    top: 50vh;
+    width: 45%;
+  }
+
+  header h1 {
+    left: 10%;
+    top: 25%;
+    font-size: 260%;
+  }
+
+  header {
+    background-position: center right -60px;
+  }
+
+  section.cyb h2 {
+    top: 15vh;
+    left: 4vw;
+    font-size: 280%;
+  }
+
+  section.cyb p {
+    top: 28vh;
+    width: 70vw;
+    line-height: 150%;
+    font-size: 120%;
+  }
+
+  section.cyb .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 650%;
+  }
+
+  section.the_last h2 {
+    top: 15vh;
+    transform: translateX(0);
+    left: 5vw;
+    width: 100%;
+    font-size: 280%;
+  }
+
+  section.the_last p {
+    top: 28vh;
+    width: 70vw;
+    font-size: 120%;
+  }
+
+  section.the_last .icon {
+    bottom: 10vh;
+    right: 40vw;
+    transform: translateX(-50%);
+    font-size: 650%;
+  }
+
+  section.spider h2 {
+    top: 15vh;
+    left: 7vw;
+    width: 100%;
+    font-size: 260%;
+  }
+
+  section.spider {
+    background-position: center left -80vw;
+  }
+
+  section.spider p {
+    top: 32vh;
+    width: 70vw;
+    font-size: 120%;
+  }
+
+  section.spider .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 650%;
+  }
+
+  section.formula h2 {
+    top: 15vh;
+    left: 10vw;
+    width: 100%;
+    font-size: 280%;
+  }
+
+  section.formula {
+    background-position: center left -90vw;
+  }
+
+  section.formula p {
+    top: 32vh;
+    width: 70vw;
+    font-size: 120%;
+  }
+
+  section.formula .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 650%;
+  }
+
+  section.ghost h2 {
+    bottom: 14vh;
+    right: -3vw;
+    width: 100%;
+    font-size: 250%;
+  }
+
+  section.ghost {
+    background-position: center left -30vw;
+  }
+
+  section.ghost p {
+    top: 35vh;
+    width: 70vw;
+    font-size: 120%;
+  }
+
+  section.ghost .icon {
+    top: 15vh;
+    left: 45vw;
+    font-size: 650%;
+  }
+
+  .return {
+    font-size: 500%;
+  }
+
+  footer {
+    padding: 15px;
+    background-color: cornflowerblue;
+    font-size: 150%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+  nav ul li a {
+    font-size: 100%;
+  }
+
+  nav ul li a:hover {
+    transform: translateX(0);
+  }
+
+  .header_logo {
+    left: 4vw;
+    top: 40vh;
+    width: 45%;
+  }
+
+  header h1 {
+    left: 10%;
+    top: 15%;
+    font-size: 260%;
+  }
+
+  header {
+    background-position: center right -60px;
+  }
+
+  section.cyb h2 {
+    top: 15vh;
+    left: 4vw;
+    font-size: 320%;
+  }
+
+  section.cyb p {
+    top: 28vh;
+    width: 70vw;
+    line-height: 150%;
+    font-size: 150%;
+  }
+
+  section.cyb .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 700%;
+  }
+
+  section.the_last h2 {
+    top: 15vh;
+    transform: translateX(0);
+    left: 10vw;
+    width: 100%;
+    font-size: 320%;
+  }
+
+  section.the_last p {
+    top: 28vh;
+    width: 70vw;
+    font-size: 150%;
+  }
+
+  section.the_last .icon {
+    bottom: 10vh;
+    right: 40vw;
+    transform: translateX(-50%);
+    font-size: 700%;
+  }
+
+  section.spider h2 {
+    top: 15vh;
+    left: 7vw;
+    width: 100%;
+    font-size: 320%;
+  }
+
+  section.spider {
+    background-position: center left -60vw;
+  }
+
+  section.spider p {
+    top: 32vh;
+    width: 70vw;
+    font-size: 150%;
+  }
+
+  section.spider .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 700%;
+  }
+
+  section.formula h2 {
+    top: 15vh;
+    left: 10vw;
+    width: 100%;
+    font-size: 320%;
+  }
+
+  section.formula {
+    background-position: center left -80vw;
+  }
+
+  section.formula p {
+    top: 32vh;
+    width: 70vw;
+    font-size: 150%;
+  }
+
+  section.formula .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 700%;
+  }
+
+  section.ghost h2 {
+    bottom: 14vh;
+    right: -3vw;
+    width: 100%;
+    font-size: 320%;
+  }
+
+  section.ghost {
+    background-position: center left -30vw;
+  }
+
+  section.ghost p {
+    top: 35vh;
+    width: 70vw;
+    font-size: 150%;
+  }
+
+  section.ghost .icon {
+    top: 15vh;
+    left: 45vw;
+    font-size: 700%;
+  }
+
+  .return {
+    font-size: 600%;
+  }
+
+  footer {
+    padding: 15px;
+    background-color: cornflowerblue;
+    font-size: 160%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 530px) and (max-width: 724px) and (orientation: landscape) {
+  nav ul li a {
+    font-size: 60%;
+  }
+
+  nav ul li a:hover {
+    transform: translateX(0);
+  }
+
+  .header_logo {
+    left: 4vw;
+    top: 45vh;
+    width: 20%;
+  }
+
+  header h1 {
+    left: 10%;
+    top: 25%;
+    font-size: 180%;
+  }
+
+  header {
+    background-position: center;
+  }
+
+  section.cyb h2 {
+    top: 20vh;
+    left: 4vw;
+    font-size: 180%;
+  }
+
+  section.cyb p {
+    top: 35vh;
+    width: 70vw;
+    line-height: 150%;
+    font-size: 70%;
+  }
+
+  section.cyb .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 350%;
+  }
+
+  section.the_last h2 {
+    top: 20vh;
+    transform: translateX(0);
+    left: 10vw;
+    width: 100%;
+    font-size: 180%;
+  }
+
+  section.the_last p {
+    top: 35vh;
+    width: 70vw;
+    font-size: 70%;
+  }
+
+  section.the_last .icon {
+    bottom: 10vh;
+    right: 40vw;
+    transform: translateX(-50%);
+    font-size: 350%;
+  }
+
+  section.spider h2 {
+    top: 20vh;
+    left: 7vw;
+    width: 100%;
+    font-size: 180%;
+  }
+
+  section.spider {
+    background-position: center;
+  }
+
+  section.spider p {
+    top: 40vh;
+    width: 70vw;
+    font-size: 70%;
+  }
+
+  section.spider .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 350%;
+  }
+
+  section.formula h2 {
+    top: 20vh;
+    left: 10vw;
+    width: 100%;
+    font-size: 180%;
+  }
+
+  section.formula {
+    background-position: center;
+  }
+
+  section.formula p {
+    top: 40vh;
+    width: 70vw;
+    font-size: 70%;
+  }
+
+  section.formula .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 350%;
+  }
+
+  section.ghost h2 {
+    bottom: 12vh;
+    right: -3vw;
+    width: 100%;
+    font-size: 180%;
+  }
+
+  section.ghost {
+    background-position: center;
+  }
+
+  section.ghost p {
+    top: 43vh;
+    width: 70vw;
+    font-size: 70%;
+  }
+
+  section.ghost .icon {
+    top: 20vh;
+    left: 45vw;
+    font-size: 350%;
+  }
+
+  .return {
+    font-size: 400%;
+  }
+
+  footer {
+    padding: 10px;
+    background-color: cornflowerblue;
+    font-size: 80%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 725px) and (max-width: 1019px) and (orientation: landscape) {
+  nav ul li a {
+    font-size: 80%;
+  }
+
+  nav ul li a:hover {
+    transform: translateX(0);
+  }
+
+  .header_logo {
+    left: 4vw;
+    top: 45vh;
+    width: 25%;
+  }
+
+  header h1 {
+    left: 13%;
+    top: 25%;
+    font-size: 200%;
+  }
+
+  header {
+    background-position: center;
+  }
+
+  section.cyb h2 {
+    top: 20vh;
+    left: 4vw;
+    font-size: 220%;
+  }
+
+  section.cyb p {
+    top: 35vh;
+    width: 70vw;
+    line-height: 150%;
+    font-size: 80%;
+  }
+
+  section.cyb .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 370%;
+  }
+
+  section.the_last h2 {
+    top: 20vh;
+    transform: translateX(0);
+    left: 10vw;
+    width: 100%;
+    font-size: 220%;
+  }
+
+  section.the_last p {
+    top: 35vh;
+    width: 70vw;
+    font-size: 80%;
+  }
+
+  section.the_last .icon {
+    bottom: 10vh;
+    right: 40vw;
+    transform: translateX(-50%);
+    font-size: 370%;
+  }
+
+  section.spider h2 {
+    top: 20vh;
+    left: 7vw;
+    width: 100%;
+    font-size: 220%;
+  }
+
+  section.spider {
+    background-position: center;
+  }
+
+  section.spider p {
+    top: 40vh;
+    width: 70vw;
+    font-size: 80%;
+  }
+
+  section.spider .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 370%;
+  }
+
+  section.formula h2 {
+    top: 20vh;
+    left: 10vw;
+    width: 100%;
+    font-size: 220%;
+  }
+
+  section.formula {
+    background-position: center;
+  }
+
+  section.formula p {
+    top: 40vh;
+    width: 70vw;
+    font-size: 80%;
+  }
+
+  section.formula .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 370%;
+  }
+
+  section.ghost h2 {
+    bottom: 12vh;
+    right: -3vw;
+    width: 100%;
+    font-size: 220%;
+  }
+
+  section.ghost {
+    background-position: center;
+  }
+
+  section.ghost p {
+    top: 43vh;
+    width: 70vw;
+    font-size: 80%;
+  }
+
+  section.ghost .icon {
+    top: 20vh;
+    left: 45vw;
+    font-size: 370%;
+  }
+
+  .return {
+    font-size: 450%;
+  }
+
+  footer {
+    padding: 10px;
+    background-color: cornflowerblue;
+    font-size: 80%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1350px) and (orientation: landscape) {
+  nav ul li a {
+    font-size: 100%;
+  }
+
+  nav ul li a:hover {
+    transform: translateX(0);
+  }
+
+  .header_logo {
+    left: 4vw;
+    top: 45vh;
+    width: 30%;
+  }
+
+  header h1 {
+    left: 13%;
+    top: 25%;
+    font-size: 300%;
+  }
+
+  header {
+    background-position: center left -28vw;
+  }
+
+  section.cyb h2 {
+    top: 15vh;
+    left: 4vw;
+    font-size: 320%;
+  }
+
+  section.cyb p {
+    top: 35vh;
+    width: 70vw;
+    line-height: 150%;
+    font-size: 120%;
+  }
+
+  section.cyb .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 600%;
+  }
+
+  section.the_last h2 {
+    top: 15vh;
+    transform: translateX(0);
+    left: 10vw;
+    width: 100%;
+    font-size: 320%;
+  }
+
+  section.the_last p {
+    top: 35vh;
+    width: 70vw;
+    font-size: 120%;
+  }
+
+  section.the_last .icon {
+    bottom: 10vh;
+    right: 40vw;
+    transform: translateX(-50%);
+    font-size: 600%;
+  }
+
+  section.spider h2 {
+    top: 15vh;
+    left: 7vw;
+    width: 100%;
+    font-size: 320%;
+  }
+
+  section.spider {
+    background-position: center;
+  }
+
+  section.spider p {
+    top: 40vh;
+    width: 70vw;
+    font-size: 120%;
+  }
+
+  section.spider .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 600%;
+  }
+
+  section.formula h2 {
+    top: 20vh;
+    left: 10vw;
+    width: 100%;
+    font-size: 320%;
+  }
+
+  section.formula {
+    background-position: center;
+  }
+
+  section.formula p {
+    top: 40vh;
+    width: 70vw;
+    font-size: 120%;
+  }
+
+  section.formula .icon {
+    bottom: 10vh;
+    right: 45vw;
+    font-size: 600%;
+  }
+
+  section.ghost h2 {
+    bottom: 12vh;
+    right: -3vw;
+    width: 100%;
+    font-size: 320%;
+  }
+
+  section.ghost {
+    background-position: center;
+  }
+
+  section.ghost p {
+    top: 43vh;
+    width: 70vw;
+    font-size: 120%;
+  }
+
+  section.ghost .icon {
+    top: 20vh;
+    left: 45vw;
+    font-size: 600%;
+  }
+
+  .return {
+    font-size: 500%;
+  }
+
+  footer {
+    padding: 20px;
+    background-color: cornflowerblue;
+    font-size: 100%;
+    text-align: center;
+  }
+}
+
+@keyframes chip {
+  0% {
+    transform: rotate(-50deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(0) scale(1.2);
+  }
+
+  50% {
+    transform: rotate(50deg) scale(0.8);
+  }
+
+  75% {
+    transform: rotate(0) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(-50deg) scale(1);
+  }
+}
+
+@keyframes car {
+  0% {
+    transform: translateX(20vw);
+  }
+
+  25% {
+    transform: translateX(-5vw);
+  }
+
+  50% {
+    transform: translateX(15vw);
+  }
+
+  75% {
+    transform: translateX(-25vw);
+  }
+
+  100% {
+    transform: translateX(20vw);
+  }
+}
+
+@keyframes tree {
+  0% {
+    color: black;
+  }
+
+  20% {
+    color: rgb(105, 33, 0);
+  }
+
+  40% {
+    color: rgb(211, 173, 4);
+  }
+
+  50% {
+    color: green;
+  }
+
+  55% {
+    color: green;
+  }
+
+  60% {
+    color: rgb(211, 173, 4);
+  }
+
+  80% {
+    color: rgb(105, 33, 0);
+  }
+
+  100% {
+    color: black;
+  }
+}
+
+@keyframes spider {
+  0% {
+    transform: scale(0.8);
+  }
+
+  20% {
+    transform: scale(1.2);
+  }
+
+  30% {
+    transform: scale(0.8);
+  }
+
+  40% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes guitar {
+  0% {
+    transform: rotate(-10deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(0) scale(1.2);
+  }
+
+  50% {
+    transform: rotate(10deg) scale(1.4);
+  }
+
+  75% {
+    transform: rotate(0) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(-10deg) scale(1);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(-75px);
+  }
+
+  100% {
+    transform: translateY(75px);
+  }
+}
